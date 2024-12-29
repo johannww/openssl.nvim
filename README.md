@@ -4,6 +4,8 @@ A basic neovim plugin for getting information
 
 TODO: put animation here
 
+https://github.com/user-attachments/assets/d4cb47f9-3db2-433d-b521-e0165c41a259
+
 # Dependencies
 
 - openssl
