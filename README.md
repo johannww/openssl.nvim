@@ -31,7 +31,7 @@ Lazy.nvim:
         { "<leader>xc", "<cmd>ViewCert<cr>" },
         { "<leader>xc", "<cmd>ViewCertVisual<cr>", mode = "v" },
         { "<leader>xa", "<cmd>ViewCertAsn1<cr>" },
-        { "<leader>xc", "<cmd>ViewCertAsn1Visual<cr>", mode = "v" },
+        { "<leader>xa", "<cmd>ViewCertAsn1Visual<cr>", mode = "v" },
     },
     config = function() require("x509-nvim").setup() end,
 },
