@@ -33,9 +33,9 @@ local function getPemFromVisualSelction()
     else
         certPemLines = string.sub(lines[1], coords["column_start"], -1)
         for i = 2, (#lines - 1) do
-            certPemLines = certPemLines .. lines[i]
+            certPemLines = certPemLines .. "\n" .. lines[i]
         end
-        certPemLines = certPemLines .. string.sub(lines[#lines], 0, coords["column_end"])
+        certPemLines = certPemLines .. "\n" .. string.sub(lines[#lines], 0, coords["column_end"])
     end
     return certPemLines
 end
