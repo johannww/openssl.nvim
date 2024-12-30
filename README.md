@@ -1,6 +1,6 @@
-# x509 nvim
+# openssl nvim
 
-A basic neovim plugin for getting information
+A basic neovim plugin for showing information on **certificates, crls, keys** whith openssl
 
 https://github.com/user-attachments/assets/d4cb47f9-3db2-433d-b521-e0165c41a259
 
@@ -25,7 +25,7 @@ Lazy.nvim:
 
 ```lua
 {
-    "johannww/x509.nvim",
+    "johannww/openssl.nvim",
     cmd = { "ViewCert", "ViewCertVisual", "ViewCertAsn1", "ViewCertAsn1Visual" },
     keys = {
         { "<leader>xc", "<cmd>ViewCert<cr>" },
@@ -41,6 +41,6 @@ Lazy.nvim:
 
 TODO
 
-# Usage
+# DISCLAIMER
 
-TODO
+This project has no relations with the [OpenSSL Project](https://github.com/openssl/openssl). 
