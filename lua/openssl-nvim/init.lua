@@ -88,28 +88,28 @@ M.setup = function()
         error("openssl failed to run")
     end
 
-    vim.api.nvim_create_user_command("ViewCert",
+    vim.api.nvim_create_user_command("OpensslView",
         function()
             showArtifact()
         end,
         {}
     )
 
-    vim.api.nvim_create_user_command("ViewCertVisual",
+    vim.api.nvim_create_user_command("OpensslViewVisual",
         function()
             showArtifactVisual()
         end,
         {}
     )
 
-    vim.api.nvim_create_user_command("ViewCertAsn1",
+    vim.api.nvim_create_user_command("OpensslViewAsn1",
         function()
             showAsn1Parse()
         end,
         {}
     )
 
-    vim.api.nvim_create_user_command("ViewCertAsn1Visual",
+    vim.api.nvim_create_user_command("OpensslViewAsn1Visual",
         function()
             showAsn1ParseVisual()
         end,

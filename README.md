@@ -26,12 +26,12 @@ Lazy.nvim:
 ```lua
 {
     "johannww/openssl.nvim",
-    cmd = { "ViewCert", "ViewCertVisual", "ViewCertAsn1", "ViewCertAsn1Visual" },
+    cmd = { "OpensslView", "OpensslViewVisual", "OpensslViewAsn1", "OpensslViewAsn1Visual" },
     keys = {
-        { "<leader>xc", "<cmd>ViewCert<cr>" },
-        { "<leader>xc", "<cmd>ViewCertVisual<cr>", mode = "v" },
-        { "<leader>xa", "<cmd>ViewCertAsn1<cr>" },
-        { "<leader>xa", "<cmd>ViewCertAsn1Visual<cr>", mode = "v" },
+        { "<leader>xc", "<cmd>OpensslView<cr>" },
+        { "<leader>xc", "<cmd>OpensslViewVisual<cr>", mode = "v" },
+        { "<leader>xa", "<cmd>OpensslViewAsn1<cr>" },
+        { "<leader>xa", "<cmd>OpensslViewAsn1Visual<cr>", mode = "v" },
     },
     config = function() require("openssl-nvim").setup() end,
 },
