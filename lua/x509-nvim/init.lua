@@ -1,4 +1,5 @@
 local util = require("x509-nvim.util")
+local type = require("x509-nvim.type")
 
 M = {}
 
@@ -48,17 +49,19 @@ local openOpensslResultInTab = function(certPemLines, opensslCmd)
     vim.api.nvim_win_set_buf(0, newbufnr)
 end
 
-local function showCert()
+local function showArtifact()
     local bufnr = vim.api.nvim_get_current_buf()
     local certPemLines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
 
-    openOpensslResultInTab(certPemLines, "openssl x509 -in %s -text -noout")
+    local cmd = type.getCmd(certPemLines)
+    openOpensslResultInTab(certPemLines, cmd)
 end
 
-local function showCertVisual()
+local function showArtifactVisual()
     local certPemLines = getPemFromVisualSelction()
 
-    openOpensslResultInTab({certPemLines}, "openssl x509 -in %s -text -noout")
+    local cmd = type.getCmd(certPemLines)
+    openOpensslResultInTab({certPemLines}, cmd)
 end
 
 local function showAsn1Parse()
@@ -87,14 +90,14 @@ M.setup = function()
 
     vim.api.nvim_create_user_command("ViewCert",
         function()
-            showCert()
+            showArtifact()
         end,
         {}
     )
 
     vim.api.nvim_create_user_command("ViewCertVisual",
         function()
-            showCertVisual()
+            showArtifactVisual()
         end,
         {}
     )
