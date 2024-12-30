@@ -1,6 +1,6 @@
 # openssl nvim
 
-A basic neovim plugin for showing information on **certificates, crls, keys** whith openssl
+A basic neovim plugin for showing information on **certificates, crls, csrs, and keys** with openssl
 
 https://github.com/user-attachments/assets/d4cb47f9-3db2-433d-b521-e0165c41a259
 
