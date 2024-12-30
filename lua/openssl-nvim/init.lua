@@ -54,6 +54,11 @@ local function showArtifact()
     local certPemLines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
 
     local cmd = type.getCmd(certPemLines)
+    if cmd == nil then
+        vim.notify("Openssl File not suported", vim.log.levels.ERROR)
+        return
+    end
+
     openOpensslResultInTab(certPemLines, cmd)
 end
 
@@ -61,6 +66,11 @@ local function showArtifactVisual()
     local certPemLines = getPemFromVisualSelction()
 
     local cmd = type.getCmd(certPemLines)
+    if cmd == nil then
+        vim.notify("Openssl File not suported", vim.log.levels.ERROR)
+        return
+    end
+
     openOpensslResultInTab({certPemLines}, cmd)
 end
 
