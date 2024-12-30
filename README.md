@@ -33,7 +33,7 @@ Lazy.nvim:
         { "<leader>xa", "<cmd>ViewCertAsn1<cr>" },
         { "<leader>xa", "<cmd>ViewCertAsn1Visual<cr>", mode = "v" },
     },
-    config = function() require("x509-nvim").setup() end,
+    config = function() require("openssl-nvim").setup() end,
 },
 ```
 

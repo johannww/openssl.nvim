@@ -1,5 +1,5 @@
-local util = require("x509-nvim.util")
-local type = require("x509-nvim.type")
+local util = require("openssl-nvim.util")
+local type = require("openssl-nvim.type")
 
 M = {}
 
