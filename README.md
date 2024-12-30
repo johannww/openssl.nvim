@@ -16,8 +16,8 @@ Others: check your package manager
 
 # Features
 
-- View certificate in a new buffer
-- View certificate ASN.1 information in a new buffer
+- View certificates, crls, csrs, and keys in a new buffer
+- View certificates, crls, csrs, and keys ASN.1 information in a new buffer
 
 # Installation
 
